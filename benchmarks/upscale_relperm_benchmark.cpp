@@ -117,10 +117,10 @@
 //   - Debug: MODEL_TYPE 0  (1138 active cells, ~0 MB)
 //   - Small: MODEL_TYPE 1  (35751 active cells, ~5 MB)
 //   - Large: MODEL_TYPE 2  (175045 active cells, ~23 MB)
-#define MODEL_TYPE 1
+#define MODEL_TYPE 2
 
 // Define tolerance to be used when comparing results.
-double tolerance = 1e-4;
+double tolerance = 1e-6;
 
 // Include eclipse grid file and reference solution by embedding hexadecimal input data files.
 #if MODEL_TYPE == 0
