@@ -10,12 +10,15 @@
 #       0x00
 #   };
 
-inputfile=$1
-outputfile=$2
+inputfile="$1"
+outputfile="$2"
 
-od -v -t x2 $inputfile | sed \
+cat "$inputfile" | \
+gzip -9 | \
+od -v -t x1 | \
+sed \
 's/^[0-9A-Fa-f]\{1,\} *//
 /^ *$/d
 s/ \{1,\}/,0x/g
 s/^/0x/
-s/$/,/' > $outputfile
+s/$/,/' > "$outputfile"
