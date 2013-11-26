@@ -16,7 +16,7 @@ of available memory for each thread when compiling. Number of threads is given
 with the -j option when calling make below.
 
 BUILDING AND RUNNING THE BENCHMARK
-Install dependent DUNE core modules and suites-sparse from Debian Packages:
+Install dependent DUNE core modules and SuiteSparse from Debian Packages:
 
   sudo add-apt-repository -y ppa:opm/ppa
   sudo apt-get update
